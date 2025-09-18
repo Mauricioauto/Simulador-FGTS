@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Antecipação FGTS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="simulator-card">
+            <h1>Simulador de Antecipação FGTS</h1>
+            
+            <div class="form-section">
+                <p class="subtitle">Simule a sua antecipação aqui</p>
+                
+                <div class="input-group">
+                    <label for="saldo">Qual o seu saldo no FGTS?</label>
+                    <input type="text" id="saldo" placeholder="R$ 0,00" class="currency-input">
+                </div>
+                
+                <div class="input-group">
+                    <label for="aniversario">Qual a data do seu aniversário?</label>
+                    <div class="date-inputs">
+                        <input type="number" id="dia" placeholder="DD" min="1" max="31" class="date-input">
+                        <input type="number" id="mes" placeholder="MM" min="1" max="12" class="date-input">
+                    </div>
+                </div>
+                
+                <div class="buttons">
+                    <button id="calcular" class="btn-primary">Calcular</button>
+                    <button id="limpar" class="btn-secondary">Limpar Dados</button>
+                </div>
+            </div>
+            
+            <div class="result-section" id="resultado" style="display: none;">
+                <div class="result-content">
+                    <p class="result-label">Você pode receber até</p>
+                    <p class="result-value" id="valorResultado">R$ 0,00</p>
+                    <p class="result-info">Taxa de 1,80% a.m. - Você recebe mais dinheiro!</p>
+                </div>
+            </div>
+            
+            <div class="disclaimer">
+                <p>Contratação sujeita a análise. Os valores na contratação podem mudar. Os valores apresentados são sem IOF.</p>
+                <p>* Pagamentos em 10 minutos para contratos sem pendências.</p>
+                <p>* Valores válidos para primeira contratação.</p>
+                <div class="security">
+                    <span class="security-icon">🔒</span>
+                    <span>Plataforma segura</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
